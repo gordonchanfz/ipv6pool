@@ -25,7 +25,7 @@ jobs:
       - name: Build Backend (amd64)
         run: |
           go mod download
-          go build -ldflags "-s -w ' -extldflags '-static'" -o ip-pool-proxy
+          go build -ldflags "-s -w -extldflags '-static'" -o ip-pool-proxy
 
       - name: Release Binary
         uses: softprops/action-gh-release@v1
